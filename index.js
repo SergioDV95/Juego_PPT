@@ -12,7 +12,7 @@ function seleccion(opcion) {
     if (opcion === "tijera") {
         seleccion = document.getElementById("tijera");
         figura = seleccion.cloneNode();
-        figura.style = "font-size: 8em;";
+        figura.style = "font-size: 8em; position: relative; top:40px; left:30px;";
         jugador.appendChild(figura);
     }
     else if (opcion === "piedra") {
@@ -33,19 +33,19 @@ function seleccion(opcion) {
     parrafo.className = "resultado";
     if (opcion === "tijera" && opcion_J2 == 1 || opcion === "piedra" && opcion_J2 == 2 || opcion === "papel" && opcion_J2 == 3) {
         parrafo.innerHTML = "Empate";
-        parrafo.style = "position: absolute; font-style: oblique; padding-bottom: 50px";
+        parrafo.style = "position: absolute; @media only screen and (min-width: 768px) {position: relative}; font-style: oblique;";
         resultado.appendChild(parrafo);
         partidas.unshift("Empate");
     }
     else if (opcion === "tijera" && opcion_J2 == 2 || opcion === "piedra" && opcion_J2 == 3 || opcion === "papel" && opcion_J2 == 1) {
         parrafo.innerHTML = "Perdiste";
-        parrafo.style = "position: absolute; font-style: oblique; padding-bottom: 50px";
+        parrafo.style = "position: absolute; @media only screen and (min-width: 768px) {position: relative}; font-style: oblique;";
         resultado.appendChild(parrafo);
         partidas.unshift("Perdiste");
     }
     else if (opcion === "tijera" && opcion_J2 == 3 || opcion === "piedra" && opcion_J2 == 1 || opcion === "papel" && opcion_J2 == 2) {
         parrafo.innerHTML = "Ganaste";
-        parrafo.style = "position: absolute; font-style: oblique; padding-bottom: 50px";
+        parrafo.style = "position: absolute; @media only screen and (min-width: 768px) {position: relative}; font-style: oblique;";
         resultado.appendChild(parrafo);
         partidas.unshift("Ganaste");
     }
@@ -63,7 +63,7 @@ function sistema(opcion) {
     if (opcion == 1) {
         seleccion = document.getElementById("tijera");
         figura = seleccion.cloneNode();
-        figura.style = "font-size: 8em;"
+        figura.style = "font-size: 8em; position: relative; top:40px; left:30px;"
         jugador.appendChild(figura);
     }
     else if (opcion == 2) {
