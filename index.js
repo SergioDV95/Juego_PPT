@@ -12,19 +12,19 @@ function seleccion(opcion) {
     if (opcion === "tijera") {
         seleccion = document.getElementById("tijera");
         figura = seleccion.cloneNode();
-        figura.style = "font-size: 8em; position: relative; top:40px; left:30px;";
+        figura.style = "font-size: 9em; position: relative; top:45px; left:35px;";
         jugador.appendChild(figura);
     }
     else if (opcion === "piedra") {
         seleccion = document.getElementById("piedra");
         figura = seleccion.cloneNode();
-        figura.style = "font-size: 8em;";
+        figura.style = "font-size: 9em;";
         jugador.appendChild(figura);
     }
     else if (opcion === "papel") {
         seleccion = document.getElementById("papel");
         figura = seleccion.cloneNode();
-        figura.style = "font-size: 8em;";
+        figura.style = "font-size: 9em;";
         jugador.appendChild(figura);
     }
     sistema(opcion_J2);
@@ -33,19 +33,19 @@ function seleccion(opcion) {
     parrafo.className = "resultado";
     if (opcion === "tijera" && opcion_J2 == 1 || opcion === "piedra" && opcion_J2 == 2 || opcion === "papel" && opcion_J2 == 3) {
         parrafo.innerHTML = "Empate";
-        parrafo.style = "position: absolute; margin-top: 160px; font-size: 1.3em; font-style: oblique;";
+        parrafo.style = "position: absolute; margin-top: 180px; font-size: 1.3em; font-style: oblique;";
         resultado.appendChild(parrafo);
         partidas.unshift("Empate");
     }
     else if (opcion === "tijera" && opcion_J2 == 2 || opcion === "piedra" && opcion_J2 == 3 || opcion === "papel" && opcion_J2 == 1) {
         parrafo.innerHTML = "Perdiste";
-        parrafo.style = "position: absolute; margin-top: 160px; font-size: 1.3em; font-style: oblique;";
+        parrafo.style = "position: absolute; margin-top: 180px; font-size: 1.3em; font-style: oblique;";
         resultado.appendChild(parrafo);
         partidas.unshift("Perdiste");
     }
     else if (opcion === "tijera" && opcion_J2 == 3 || opcion === "piedra" && opcion_J2 == 1 || opcion === "papel" && opcion_J2 == 2) {
         parrafo.innerHTML = "Ganaste";
-        parrafo.style = "position: absolute; margin-top: 160px; font-size: 1.3em; font-style: oblique;";
+        parrafo.style = "position: absolute; margin-top: 180px; font-size: 1.3em; font-style: oblique;";
         resultado.appendChild(parrafo);
         partidas.unshift("Ganaste");
     }
@@ -63,19 +63,19 @@ function sistema(opcion) {
     if (opcion == 1) {
         seleccion = document.getElementById("tijera");
         figura = seleccion.cloneNode();
-        figura.style = "font-size: 8em; position: relative; top:40px; left:30px;"
+        figura.style = "font-size: 9em; position: relative; top:45px; left:35px;"
         jugador.appendChild(figura);
     }
     else if (opcion == 2) {
         seleccion = document.getElementById("piedra");
         figura = seleccion.cloneNode();
-        figura.style = "font-size: 8em;"
+        figura.style = "font-size: 9em;"
         jugador.appendChild(figura);
     }
     else if (opcion == 3) {
         seleccion = document.getElementById("papel");
         figura = seleccion.cloneNode();
-        figura.style = "font-size: 8em;"
+        figura.style = "font-size: 9em;"
         jugador.appendChild(figura);
     }
 };
