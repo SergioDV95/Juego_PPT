@@ -168,12 +168,12 @@
   #juego .columna #partidas {
     width: 300px;
     height: 80px;
-    margin-top: 70px;
+    margin-top: 100px;
   }
 }
 @media only screen and (min-width: 768px) {
   #juego .columna #partidas {
-    margin-top: 80px;
+    margin-top: 100px;
   }
 }
 #juego .columna #partidas .historiales {
